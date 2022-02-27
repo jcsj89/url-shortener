@@ -5,6 +5,7 @@
     "main": "src/server.ts",
     "scripts": {
         "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",
+        "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
         "start": "npx tsc && node dist/src/server.js",
         "lint": "eslint . --ext .ts",
         "lint-fix": "eslint . --ext .ts --fix",
