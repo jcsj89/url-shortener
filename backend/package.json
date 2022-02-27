@@ -1,0 +1,36 @@
+{
+    "name": "backend",
+    "version": "1.0.0",
+    "description": "Encurtador de URL",
+    "main": "src/server.ts",
+    "scripts": {
+        "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",
+        "start": "npx tsc && node dist/src/server.js",
+        "lint": "eslint . --ext .ts",
+        "lint-fix": "eslint . --ext .ts --fix",
+        "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write"
+    },
+    "keywords": [],
+    "author": "Jose Carlos Sant'Anna Junior",
+    "license": "ISC",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.17.3",
+        "pg": "^8.7.3",
+        "reflect-metadata": "^0.1.13",
+        "ts-node-dev": "^1.1.8",
+        "typeorm": "^0.2.44"
+    },
+    "devDependencies": {
+        "@types/cors": "^2.8.12",
+        "@types/express": "^4.17.13",
+        "@types/node": "^17.0.21",
+        "@typescript-eslint/eslint-plugin": "^5.12.1",
+        "@typescript-eslint/parser": "^5.12.1",
+        "eslint": "^8.10.0",
+        "eslint-config-prettier": "^8.4.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "prettier": "^2.5.1",
+        "typescript": "^4.5.5"
+    }
+}
