@@ -2,6 +2,7 @@ import 'reflect-metadata';
 import express from 'express';
 import routes from './routes';
 import cors from 'cors';
+import './typeorm';
 
 // Cria uma instancia do express
 const app = express();
