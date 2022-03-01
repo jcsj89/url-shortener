@@ -1,0 +1,7 @@
+.footer {
+    display: flex;
+    width: 100vw;
+    background-color: darkorange;        
+    
+    border: 1px solid rgb(150, 207, 43);
+}

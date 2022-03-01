@@ -1,0 +1,35 @@
+.form {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.form h2 {
+    font-size: 2.5rem;
+}
+
+.input {
+    border: 1px green solid ;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    width: 40vw;
+    height: 50px;
+    padding: 0 2rem;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.botao {
+    height: 50px;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    background-color: #1E90FF;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border-left: none;
+    padding: 0 1rem;
+    margin: 0;
+}
