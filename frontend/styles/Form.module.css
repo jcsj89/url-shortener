@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem;    
 }
 
 .form h2 {
@@ -11,7 +11,8 @@
 }
 
 .input {
-    border: 1px green solid ;
+    border: 1px solid #E76F51;
+    border-right: none;
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
     width: 40vw;
@@ -22,14 +23,20 @@
 }
 
 .botao {
-    height: 50px;
-    font-size: 1rem;
-    color: white;
-    border: none;
-    background-color: #1E90FF;
+    height: 51px;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: 1px solid #E76F51;
+    background-color: #E76F51;
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
     border-left: none;
-    padding: 0 1rem;
+    padding: 16px 15px;
     margin: 0;
+}
+
+.form p {
+    font-size: 0.9rem;
+    padding-top: 1rem;
+    width: 95%;
 }

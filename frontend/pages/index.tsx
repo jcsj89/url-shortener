@@ -1,33 +1,35 @@
+import Head from "next/head";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import Card from "../components/Card";
 import Footer from "../components/Footer"
 import Form from "../components/Form";
-import Head from "../components/Head"
+
 import Logo from "../components/Logo";
+import Resposta from "../components/Resposta";
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
   const [urls, setUrls] = useState('');
-  
-  const url = (url) => { setUrls(url) };  
-  
-function renderLink(){
-  if(urls){
-    return (
-      <Card>
-        <h1>
-          <a href={`http://localhost:3333/${urls}`}>
-            http://localhost:3333/{urls}
-          </a>
-        </h1>
-      </Card>
-    );
+
+  const url = (url) => { setUrls(url) };
+
+  const renderResp = () => {
+    if (urls) {
+      return (
+        <Card>
+          <Resposta url={urls} />
+        </Card>
+      )
+    }
   }
-}
+
 
   return (
     <>
-      <Head />
+      <Head>
+        <title>Encurtador</title>
+      </Head>
 
       <div className={styles.container}>
         <Logo />
@@ -36,10 +38,11 @@ function renderLink(){
           <Form url={url} />
         </Card>
 
-      {renderLink()}
-       
-      <Footer />
+        {/* Card da resposta com a URL curta */}
+        {renderResp()}
+
       </div>
+      <Footer />
 
     </>
   );
