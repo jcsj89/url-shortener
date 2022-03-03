@@ -1,7 +1,9 @@
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Card from "../components/Card";
+import Explicacao from "../components/Explicacap";
 import Footer from "../components/Footer"
 import Form from "../components/Form";
 
@@ -40,6 +42,9 @@ export default function Home() {
 
         {/* Card da resposta com a URL curta */}
         {renderResp()}
+
+        
+        <Explicacao />
 
       </div>
       <Footer />

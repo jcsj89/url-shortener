@@ -13,10 +13,22 @@ export default class CreateUrlService {
         tabela url, a url do usuario e a url encurtada
 
      */
-    public async execute({ long }: IRequest): Promise<Url | boolean> {
+    public async execute({
+        long,
+    }: IRequest): Promise<Url | boolean | undefined> {
         const urlsRepository = getCustomRepository(UrlRepository);
 
         const short = this.geradorStringAleatorio(5);
+
+        const existsUrl = await urlsRepository.findByLong(long);
+
+        /* 
+            Verifica se ja existe uma url curta para esse link longo 
+            caso exista, retorna ela.
+        */
+        if (Array.isArray(existsUrl) && existsUrl.length > 0) {
+            return existsUrl[0];
+        }
 
         /*
             Caso a url for valida, salva no banco e retorna
@@ -49,7 +61,6 @@ export default class CreateUrlService {
 
         for (let i = 0; i < tamanho; i++) {
             const ramdomNumber = Math.floor(Math.random() * caracteres.length);
-            // shortUrl.concat(caracteres[ramdomNumber]);
             shortUrl += caracteres[ramdomNumber];
         }
         return shortUrl;
